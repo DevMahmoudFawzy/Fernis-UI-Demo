@@ -1,0 +1,34 @@
+<div class="art-menu__container">
+  <div class="user-image">
+    <img src="https://www.theartstory.org/images20/new_design/c/c_orozco_gabriel.jpg" alt="">
+  </div>
+  <div class="user-data">
+    <span class="user-name">Gabriel Orozco</span>
+    <span class="user-birth">Mexico (1962 - )</span>
+  </div>
+</div>
+<div class="sub-divider">
+
+</div>
+<div class="art-work__container">
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+    <ngxMasonryItem *ngFor="let item of masonryItems" class="masonry-item">
+      <div class="masonry-item__wrapper">
+        <a class="masonry-item__img" href="">
+          <img src="{{item.picture}}" alt="art image">
+        </a>
+        <div class="masonry-item__details">
+          <a class="item-details__art-name" href="">
+            Art Name
+          </a>
+          <span class="item-details__specs">2020 <br> 20 * 20 cm</span>
+          <a class="item-details__gallery" href="">Gallery Name</a>
+          <p class="item-details__desc">Some art description here...</p>
+        </div>
+      </div>
+    </ngxMasonryItem>
+  </ngx-masonry>
+
+  <button *ngIf="limit < 100" (click)="showMoreImages()">Show More Images</button>
+  <h2 *ngIf="limit >= 100">No More Images</h2>
+</div>

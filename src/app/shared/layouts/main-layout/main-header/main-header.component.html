@@ -1,0 +1,33 @@
+<header class="main-header">
+    <div class="main-brand">
+        <a href="">Fernis Gallery</a>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-column__static"></div>
+    <div class="header-divider"></div>
+    <nav class="main-nav">
+        <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="">Artist</a></li>
+            <li class="main-nav__item"><a href="">Exhibition</a></li>
+            <li class="main-nav__item"><a href="">Artworks</a></li>
+            <li class="main-nav__item"><a href="">Sales</a></li>
+            <li class="main-nav__item"><a href="">More</a></li>
+        </ul>
+        <div class="main-nav__functions">
+            <div class="main-nav__search">
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="input" #searchInp>
+                    <div class="btn" (click)="onSearchToggle(searchInp, searchBtn)" #searchBtn>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <a class="main-nav__settings" href="">
+                <i class="fa fa-cog"></i>
+            </a>
+            <a class="main-nav__notify" href="">
+                <i class="fa fa-bell"></i>
+            </a>
+        </div>
+    </nav>
+</header>
